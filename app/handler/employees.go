@@ -14,7 +14,7 @@ func GetAllEmployees(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 	respondJSON(w, http.StatusOK, employees)
 }
 
-func CreateEmployeee(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
+func CreateEmployee(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 	employee := model.Employee{}
 
 	decoder := json.NewDecoder(r.Body)
